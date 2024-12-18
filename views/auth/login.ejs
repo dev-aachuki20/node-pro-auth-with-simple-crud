@@ -1,0 +1,38 @@
+<%- include('../layouts/head.ejs') %>
+
+
+  <div class="row p-3">
+    <div class="col-md-2"></div>
+    <div class="col-md-3">
+      <img src="https://images.pexels.com/photos/5082561/pexels-photo-5082561.jpeg?auto=compress&cs=tinysrgb&w=400"
+        height="340" width="250" alt="">
+    </div>
+    <div class="col-md-5">
+      <h3>
+        Login here!!
+      </h3>
+      <p style="color: red;">
+      </p>
+      <form method="post" action="/login">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email</label>
+          <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email"
+            required>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Password</label>
+          <input type="password" name="password" class="form-control" id="exampleFormControlInput1"
+            placeholder="Enter Password" required>
+        </div>
+        <div class="d-flex">
+          <button class="btn btn-primary" type="submit">
+            Login
+          </button>
+          <p style="margin-left:20px; margin-top: 10px;">If not register then please <a href="/signup">SignUp </a></p>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+
+  <%- include('../layouts/foot.ejs') -%>

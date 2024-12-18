@@ -1,0 +1,10 @@
+<%- include('../layouts/head.ejs') %>
+
+
+    <h1>Create new contact</h1>
+    <a href="/contacts">Back to Contacts</a>
+
+    <%- include('./form',{ action: '/contacts' , contact: null, buttonText: 'Submit' }); %>
+
+
+<%- include('../layouts/foot.ejs') %>

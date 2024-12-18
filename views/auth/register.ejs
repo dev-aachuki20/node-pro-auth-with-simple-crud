@@ -1,0 +1,63 @@
+<%- include('../layouts/head.ejs') %>
+
+
+  <div class="row p-3">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <h3>
+        Registration Form
+      </h3>
+      <p style="color: red;">
+      </p>
+      <div class="row">
+        <form method="post" action="/signup">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">First Name</label>
+                <input type="text" name="first_name" class="form-control" id="exampleFormControlInput1"
+                  placeholder="Enter first name">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="exampleFormControlInput2" class="form-label">Last Name</label>
+                <input type="text" name="last_name" class="form-control" id="exampleFormControlInput2"
+                  placeholder="Enter last name">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="exampleFormControlInput3" class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" id="exampleFormControlInput3"
+                  placeholder="Enter email" required>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="exampleFormControlInput4" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" id="exampleFormControlInput4"
+                  placeholder="Enter password" required>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="mb-3">
+                <label for="exampleFormControlInput5" class="form-label">Mobile Number</label>
+                <input type="number" name="mobile_number" class="form-control" id="exampleFormControlInput5"
+                  placeholder="Enter mobile number">
+              </div>
+            </div>
+          </div>
+          <div class="d-flex">
+            <button class="btn btn-primary" type="submit">
+              Signup
+            </button>
+            <p style="margin-left:20px">If alredy signup then please<a href="/login">Login </a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+
+  <%- include('../layouts/foot.ejs') -%>

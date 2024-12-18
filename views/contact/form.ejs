@@ -1,0 +1,33 @@
+<div class="p-4">
+    <div class="text-center">
+        <h3>Contact Us</h3>
+        <p>Feel free to ask if you have any query!!</p>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <img src="https://images.pexels.com/photos/326576/pexels-photo-326576.jpeg?auto=compress&cs=tinysrgb&w=400" height="340" width="400" alt="">
+        </div>
+        <div class="col-md-7">
+            <form name="contact_form" method="POST" action="<%= action %>">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                    <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Enter Name"
+                        value="<%= contact ? contact.name : '' %>" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" id="exampleFormControlInput2" placeholder="Enter Email"
+                        value="<%= contact ? contact.email : '' %>" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                    <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        required><%= contact ? contact.message : '' %></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">
+                    <%= buttonText %>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
