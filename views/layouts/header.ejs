@@ -20,11 +20,10 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                   aria-expanded="false">
-                  Hello, <%= session.user.first_name %>!
+                  <b> Welcome, <%= ` ${session.user.first_name} ${session.user.last_name}` %>!</b>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#scrollspyHeading3">Profile</a></li>
-                  <li><a class="dropdown-item" href="#scrollspyHeading4">Setting</a></li>
+                  <li><a class="dropdown-item" href="/profile">Profile</a></li>
                   <li>
                     <hr class="dropdown-divider">
                   </li>
@@ -34,7 +33,6 @@
                 </ul>
               </li>
               <% } else {%>
-
                 <li class="nav-item">
                   <a class="nav-link" href="/login">Login</a>
                 </li>

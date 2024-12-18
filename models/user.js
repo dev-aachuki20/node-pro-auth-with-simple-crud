@@ -72,8 +72,16 @@ userSchema.methods.comparePassword = function (userPassword) {
     return bcrypt.compare(userPassword, this.password);
 };
 
+// Method to print full name
+// userSchema.methods.getFullName = function () {
+//     return `${this.first_name} ${this.last_name}`;
+// };
+
+// Define a virtual property for fullName
+// userSchema.virtual('fullName').get(function () {
+//     return `${this.first_name} ${this.last_name}`;
+// });
+
 // create a model.
 const User = mongoose.model('User', userSchema);
-
-// Export the model so it can be used in other files.
 module.exports = User;
