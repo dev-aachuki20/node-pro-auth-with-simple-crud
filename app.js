@@ -12,8 +12,8 @@ const flash = require('connect-flash');
 const toastr = require('express-toastr');
 const app = express();
 
-
-connectDB(); // Connect to MongoDB , call the function to connect to mongodb
+// Connect to MongoDB , call the function to connect to mongodb
+connectDB();
 
 // Use Middleware
 app.use(express.urlencoded({ extended: true }));
