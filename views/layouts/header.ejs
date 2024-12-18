@@ -2,7 +2,7 @@
   <div class="col-md-12">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/home">Node</a>
+        <a class="navbar-brand" href="/home"><b>Node Pro</b></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -20,7 +20,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                   aria-expanded="false">
-                  <b> Welcome, <%= ` ${session.user.first_name} ${session.user.last_name}` %>!</b>
+                  <b> Welcome <%= ` ${session.user.first_name} ${session.user.last_name}` %>!</b>
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="/profile">Profile</a></li>
