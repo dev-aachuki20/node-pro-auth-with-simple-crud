@@ -4,14 +4,14 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser')
 const crypto = require('crypto');
 const toastr = require('express-toastr');
-const connectDB = require('./db/conn');
-const { port } = require('./db/config');
+const connectDB = require('./db/config');
 const authRoutes = require('./routes/authRoutes');
 const contactRoutes = require('./routes/contactRoutes');
 const profileRoutes = require('./routes/profileRoutes');
 const { requireAuth } = require('./middleware');
 const flash = require('connect-flash');
 const app = express();
+const port = 5000;
 
 // Connect to MongoDB
 connectDB();
@@ -19,6 +19,7 @@ connectDB();
 // Use Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static('public'));
 app.use(cookieParser('secret'));
 app.use(session({
     secret: crypto.randomBytes(64).toString('hex'),

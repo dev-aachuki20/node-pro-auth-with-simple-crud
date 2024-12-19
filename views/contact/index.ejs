@@ -5,10 +5,10 @@
         <div class="col-md-10">
             <div class="row p-4">
                 <div class="col-md-6">
-                    <h3>Contact list</h3>
+                    <h3>Contacts list</h3>
                 </div>
             </div>
-            <table class="table table-striped table-hover">
+            <table class="table table-bordered">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -19,9 +19,11 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <% contacts.forEach((contact, index) => { %>
+                    <% contacts.forEach((contact, index)=> { %>
                         <tr>
-                            <th scope="row"><%= index+1 %></th>
+                            <th scope="row">
+                                <%= index+1 %>
+                            </th>
                             <td>
                                 <%= contact.name.charAt(0).toUpperCase() + contact.name.slice(1) %>
                             </td>
@@ -32,12 +34,14 @@
                                 <%= contact.message.charAt(0).toUpperCase() + contact.message.slice(1) %>
                             </td>
                             <td class="d-flex">
-                                <a href="/contacts/<%= contact._id %>"><i class="fa-solid fa-eye"></i></a>
+                                <a href="/contacts/<%= contact._id %>"><i
+                                        class="action_eye fa-solid fa-eye text-dark p-1"></i></a>
                                 <a href="/contacts/<%= contact._id %>/edit"><i
-                                        class="fa-solid fa-pen-to-square"></i></a>
+                                        class="fa-solid fa-pen-to-square text-primary p-1"></i></a>
                                 <form action="/contacts/<%= contact._id %>/delete" method="POST"
                                     style="display:inline;">
-                                    <button type="submit"><i class="fa-solid fa-trash"></i></button>
+                                    <button style="border: none; background: none;" type="submit"><i
+                                            class="fa-solid fa-trash text-danger p-1"></i></button>
                                 </form>
                             </td>
                         </tr>

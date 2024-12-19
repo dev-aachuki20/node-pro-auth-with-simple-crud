@@ -1,0 +1,13 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+table,
+.action_eye {
+  color: #fff !important;
+}
+
+.card-body {
+  color: #000;
+}
