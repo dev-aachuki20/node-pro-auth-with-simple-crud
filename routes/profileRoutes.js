@@ -11,7 +11,7 @@ router.get('/', requireAuth, function (req, res) {
         if (req.session && req.session.user) {
             const profileData = req.session.user;
             res.locals.title = "Profile Page";
-            return res.render('profile/index', { profileData: profileData });
+            return res.render('profile/index', { profileData: profileData, activePage: 'profile' });
         }
     } catch (error) {
         console.log(`Something want wrong to fetch profile ${error}`);

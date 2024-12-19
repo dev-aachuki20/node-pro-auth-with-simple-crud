@@ -9,7 +9,7 @@ const { status } = require('../constants/constant');
 router.get('/', redirectIfAuthenticated, function (req, res) {
     try {
         res.locals.title = "Login Page";
-        return res.render('auth/login');
+        return res.render('auth/login', { activePage: '/' });
     } catch (error) {
         res.status(500).render('error', { message: 'There was an error in signin.' });
     }
@@ -19,7 +19,7 @@ router.get('/', redirectIfAuthenticated, function (req, res) {
 router.get('/login', redirectIfAuthenticated, function (req, res) {
     try {
         res.locals.title = "Login Page";
-        return res.render('auth/login');
+        return res.render('auth/login', { activePage: 'login' });
     } catch (error) {
         res.status(500).render('error', { message: 'There was an error in signin.' });
     }

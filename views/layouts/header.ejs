@@ -11,10 +11,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/home">Home</a>
+              <a class="nav-link <%= activePage === 'home' ? 'active' : '' %>" aria-current="page" href="/home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/contacts">Contact Us</a>
+              <a class="nav-link <%= activePage === 'contacts' ? 'active' : '' %>" href="/contacts">Contact Us</a>
             </li>
             <% if(session && session.userId) { %>
               <li class="nav-item dropdown">
@@ -23,7 +23,7 @@
                   <b> Welcome <%= ` ${session.user.first_name} ${session.user.last_name}` %>!</b>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/profile">Profile</a></li>
+                  <li><a class="dropdown-item <%= activePage === 'profile' ? 'active' : '' %>" href="/profile">Profile</a></li>
                   <li>
                     <hr class="dropdown-divider">
                   </li>
@@ -34,7 +34,7 @@
               </li>
               <% } else {%>
                 <li class="nav-item">
-                  <a class="nav-link" href="/login">Login</a>
+                  <a class="nav-link <%= activePage === 'login' ? 'active' : '' %>" href="/login">Login</a>
                 </li>
                 <% }%>
           </ul>

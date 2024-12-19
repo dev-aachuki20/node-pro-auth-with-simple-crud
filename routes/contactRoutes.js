@@ -35,7 +35,7 @@ router.get('/', requireAuth, async function (req, res) {
             res.status(404).send('Zero records found')
         }
         res.locals.title = "Contact Page";
-        return res.render('contact/index', { contacts: contacts });
+        return res.render('contact/index', { contacts: contacts, activePage: 'contacts' });
     } catch (error) {
         console.error('Error fetching  contact:', error);
         res.status(500).send('Error fetching the contact details.');
@@ -50,7 +50,7 @@ router.get('/:id', async function (req, res) {
         if (!contactById) {
             res.status(404).send('Sorry!! contact not found');
         }
-        res.render('contact/show', { contact: contactById });
+        res.render('contact/show', { contact: contactById, activePage: 'contacts' });
     } catch (error) {
         console.error('Error fetching  contact:', error);
         res.status(500).send('Error fetching the contact details.');
@@ -62,7 +62,7 @@ router.get('/:id/edit', async function (req, res) {
     try {
         const id = req.params.id;
         const contact = await Contact.findById(id);
-        res.render('contact/edit', { contact: contact });
+        res.render('contact/edit', { contact: contact, activePage: 'contacts' });
     } catch (error) {
         console.error('Error deleting contact:', error);
         res.status(500).send('Error deteting the contact details.');

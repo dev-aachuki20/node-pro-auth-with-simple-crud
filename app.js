@@ -54,7 +54,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.get('/home', requireAuth, function (req, res) {
     try {
         res.locals.title = "Home Page";
-        return res.render('index');
+        return res.render('index', { activePage: 'home' });
     } catch (error) {
         res.status(500).render('error', { message: 'There was an error in signin.' });
     }
