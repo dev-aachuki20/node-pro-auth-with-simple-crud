@@ -5,7 +5,9 @@
         <div class="col-md-3"></div>
         <div class="col-md-6">
             <div class="py-4">
-                <h4>Contact Detail</h4>
+                <h4>
+                    <%= __('contact_detail')%>
+                </h4>
             </div>
 
             <div class="card">
@@ -19,7 +21,9 @@
                     <p class="card-text">
                         <%= contact.message %>
                     </p>
-                    <a href="/contacts" class="btn btn-primary">Back to Contacts</a>
+                    <a href="/contacts" class="btn btn-primary">
+                        <%= __('contact_form.back_to_contacts')%>
+                    </a>
                 </div>
             </div>
         </div>

@@ -1,10 +1,14 @@
 <%- include('../layouts/head.ejs') %>
 
 
-    <h1>Create new contact</h1>
-    <a href="/contacts">Back to Contacts</a>
+    <h1>
+        <%= __('contact_form.create_new_contact')%>
+    </h1>
+    <a href="/contacts">
+        <%= __('contact_form.back_to_contacts')%>
+    </a>
 
-    <%- include('./form',{ action: '/contacts' , contact: null, buttonText: 'Submit' }); %>
+    <%- include('./form',{ action: '/contacts' , contact: null, buttonText: __('submit') }); %>
 
 
-<%- include('../layouts/foot.ejs') %>
+        <%- include('../layouts/foot.ejs') %>

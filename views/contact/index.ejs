@@ -5,17 +5,27 @@
         <div class="col-md-10">
             <div class="row p-4">
                 <div class="col-md-6">
-                    <h3>Contacts list</h3>
+                    <h3>
+                        <%= __('contact_form.contact_list')%>
+                    </h3>
                 </div>
             </div>
             <table class="table table-bordered">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Message</th>
-                        <th scope="col">Actions</th>
+                        <th scope="col">
+                            <%= __('contact_form.table.name')%>
+                        </th>
+                        <th scope="col">
+                            <%= __('contact_form.table.email')%>
+                        </th>
+                        <th scope="col">
+                            <%= __('contact_form.table.message')%>
+                        </th>
+                        <th scope="col">
+                            <%= __('contact_form.table.action')%>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -24,6 +34,7 @@
                             <th scope="row">
                                 <%= index+1 %>
                             </th>
+
                             <td>
                                 <%= contact.name.charAt(0).toUpperCase() + contact.name.slice(1) %>
                             </td>

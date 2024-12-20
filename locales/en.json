@@ -1,0 +1,70 @@
+{
+    "node_pro": "Node Pro",
+    "login": "Acceso",
+    "signup": "SignUp",
+    "form": "Form",
+    "home": "Home",
+    "contact_us": "Contact Us",
+    "welcome": "Welcome",
+    "profile": "Profile",
+    "logout": "Logout",
+    "language": "Language",
+    "update": "Update",
+    "save": "Save",
+    "submit": "Submit",
+    "previous": "Previous",
+    "next": "Next",
+    "login_form": {
+        "fields": {
+            "email": "Email",
+            "password": "Password"
+        },
+        "placeholder": {
+            "enter_email": "Enter Email",
+            "enter_password": "Enter Password"
+        },
+        "not_signup": "If not register then please"
+    },
+    "register_form": {
+        "fields": {
+            "first_name": "First Name",
+            "last_name": "Last Name",
+            "email": "Email",
+            "password": "Password",
+            "mobile_number": "Mobile Number"
+        },
+        "placeholder": {
+            "enter_first_name": "Enter First Name",
+            "enter_last_name": "Enter Last Name",
+            "enter_email": "Enter Email",
+            "enter_password": "Enter Password",
+            "enter_mobile_number": "Enter Email Mobile Number"
+        },
+        "already_signup": "If alredy signup then please"
+    },
+    "contact_form": {
+        "fields": {
+            "full_name": "Full Name",
+            "email": "Email",
+            "message": "Message"
+        },
+        "placeholder": {
+            "enter_full_name": "Enter Full Name",
+            "enter_email": "Enter Email",
+            "enter_message": "Enter Message"
+        },
+        "create_new_contact": "Create new contact",
+        "back_to_contacts": "Back to Contacts",
+        "edit_contact": "Edit contact",
+        "feel_free_to_ask": "Feel free to ask if you have any query!!",
+        "contact_detail": "Contact Detail",
+        "contact_list": "Contacts list",
+        "table": {
+            "name": "Name",
+            "email": "Email",
+            "message": "Message",
+            "action": "Actions"
+        }
+    },
+    "need_to_login": "You need to log in to access this page."
+}

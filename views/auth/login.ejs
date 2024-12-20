@@ -9,26 +9,35 @@
     </div>
     <div class="col-md-5">
       <h3>
-        Login here!!
+        <%= __('login') %>
+          <%=__('form') %>
       </h3>
       <p style="color: red;">
       </p>
       <form method="post" action="/login">
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Email</label>
-          <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email"
-            required autocomplete="off">
+          <label for="exampleFormControlInput1" class="form-label">
+            <%= __('login_form.fields.email')%>
+          </label>
+          <input type="email" name="email" class="form-control" id="exampleFormControlInput1"
+            placeholder="<%= __('login_form.placeholder.enter_email')%>" required autocomplete="off">
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Password</label>
+          <label for="exampleFormControlInput1" class="form-label">
+            <%= __('login_form.fields.password')%>
+          </label>
           <input type="password" name="password" class="form-control" id="exampleFormControlInput1"
-            placeholder="Enter Password" required autocomplete="off">
+            placeholder="<%= __('login_form.placeholder.enter_password')%>" required autocomplete="off">
         </div>
         <div class="d-flex">
           <button class="btn btn-primary" type="submit">
-            Login
+            <%= __('login') %>
           </button>
-          <p style="margin-left:20px; margin-top: 10px;">If not register then please <a href="/signup">SignUp </a></p>
+          <p style="margin-left:20px; margin-top: 10px;">
+            <%= __('login_form.not_signup')%> <a href="/signup">
+                <%= __('signup')%>
+              </a>
+          </p>
         </div>
       </form>
     </div>

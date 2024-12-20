@@ -82,7 +82,7 @@ router.get('/logout', (req, res) => {
 router.get('/signup', function (req, res) {
     try {
         res.locals.title = "Sign Up Page";
-        return res.render('auth/register');
+        return res.render('auth/register', {activePage: 'signup'});
     } catch (error) {
         res.status(500).render('error', { message: 'There was an error to open register form.' });
     }

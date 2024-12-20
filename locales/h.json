@@ -1,0 +1,71 @@
+{
+    "node_pro": "नोड प्रो",
+    "login": "लॉगिन",
+    "signup": "साइनअप",
+    "form": "फॉर्म",
+    "home": "होम",
+    "contact_us": "संपर्क करें",
+    "welcome": "स्वागत है",
+    "profile": "प्रोफ़ाइल",
+    "logout": "लॉगआउट",
+    "language": "भाषा",
+    "update": "अपडेट",
+    "save": "सहेजें",
+    "submit": "जमा करें",
+    "previous": "पिछला",
+    "next": "अगला",
+    "login_form": {
+        "fields": {
+            "email": "ईमेल",
+            "password": "पासवर्ड"
+        },
+        "placeholder": {
+            "enter_email": "ईमेल दर्ज करें",
+            "enter_password": "पासवर्ड दर्ज करें"
+        },
+        "not_signup": "अगर पंजीकरण नहीं किया है, तो कृपया"
+    },
+    "register_form": {
+        "fields": {
+            "first_name": "पहला नाम",
+            "last_name": "अंतिम नाम",
+            "email": "ईमेल",
+            "password": "पासवर्ड",
+            "mobile_number": "मोबाइल नंबर"
+        },
+        "placeholder": {
+            "enter_first_name": "पहला नाम दर्ज करें",
+            "enter_last_name": "अंतिम नाम दर्ज करें",
+            "enter_email": "ईमेल दर्ज करें",
+            "enter_password": "पासवर्ड दर्ज करें",
+            "enter_mobile_number": "मोबाइल नंबर दर्ज करें"
+        },
+        "already_signup": "अगर पहले से पंजीकरण किया है, तो कृपया"
+    },
+    "contact_form": {
+        "fields": {
+            "full_name": "पूरा नाम",
+            "email": "ईमेल",
+            "message": "संदेश"
+        },
+        "placeholder": {
+            "enter_full_name": "पूरा नाम दर्ज करें",
+            "enter_email": "ईमेल दर्ज करें",
+            "enter_message": "संदेश दर्ज करें"
+        },
+        "create_new_contact": "नया संपर्क बनाएँ",
+        "back_to_contacts": "संपर्कों में वापस जाएं",
+        "edit_contact": "संपर्क संपादित करें",
+        "feel_free_to_ask": "अगर आपको कोई सवाल है, तो कृपया बेझिजक पूछें!",
+        "contact_detail": "संपर्क विवरण",
+        "contact_list": "संपर्क सूची",
+        "table": {
+            "name": "नाम",
+            "email": "ईमेल",
+            "message": "संदेश",
+            "action": "कार्य"
+        }
+    },
+    "need_to_login": "इस पृष्ठ तक पहुँचने के लिए आपको लॉगिन करना होगा।",
+    "contact_list": "contact_list"
+}

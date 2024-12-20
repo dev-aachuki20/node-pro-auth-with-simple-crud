@@ -1,10 +1,10 @@
 <%- include('../layouts/head.ejs') %>
 
 
-    <h1>Edit contact</h1>
-    <a href="/contacts">Back to Contacts</a>
+    <h1><%= __('contact_form.edit_contact')%></h1>
+    <a href="/contacts"><%= __('contact_form.back_to_contacts')%></a>
 
-    <%- include('./form',{ action: `/contacts/${contact._id}/update`, contact, buttonText: 'Update' }); %>
+    <%- include('./form',{ action: `/contacts/${contact._id}/update`, contact, buttonText: __('update') }); %>
 
 
 <%- include('../layouts/foot.ejs') %>
