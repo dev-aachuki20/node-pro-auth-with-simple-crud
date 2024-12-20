@@ -33,47 +33,44 @@
 
 
 
-          <% if(session && session.userId) { %>
-            <!-- User info dropdown (name) -->
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-              <!-- Toggle button to switch themes -->
-              <li class="nav-item dropdown">
-                <button class="theme_icon" id="theme-toggle" style="border: none; background: none;">
-                  <i class="fa-solid fa-moon p-2"></i>
-                </button>
-              </li>
-
-              <!-- Language dropdown -->
-              <li class="nav-item dropdown">
-                <a class="nav-link" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-                  <% if(lang=='es' ) {%>
-                    <span class="flag-icon flag-icon-es"></span> ES
-                    <% } else if(lang=='fr' ) {%>
-                      <span class="flag-icon flag-icon-fr"></span> FR
-                      <% } else {%>
-                        <span class="flag-icon flag-icon-in"></span> EN
-                        <% }%>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item <%= lang === 'en' ? 'active' : '' %>" href="/set-language/en">
+          <!-- User info dropdown (name) -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <!-- Toggle button to switch themes -->
+            <li class="nav-item dropdown">
+              <button class="theme_icon" id="theme-toggle" style="border: none; background: none;">
+                <i class="fa-solid fa-moon p-2"></i>
+              </button>
+            </li>
+            <!-- Language dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                <% if(lang=='es' ) {%>
+                  <span class="flag-icon flag-icon-es"></span> ES
+                  <% } else if(lang=='fr' ) {%>
+                    <span class="flag-icon flag-icon-fr"></span> FR
+                    <% } else {%>
                       <span class="flag-icon flag-icon-in"></span> EN
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item <%= lang === 'es' ? 'active' : '' %>" href="/set-language/es">
-                      <span class="flag-icon flag-icon-es"></span> ES
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item <%= lang === 'fr' ? 'active' : '' %>" href="/set-language/fr">
-                      <span class="flag-icon flag-icon-fr"></span> FR
-                    </a>
-                  </li>
-                </ul>
-              </li>
-
+                      <% }%>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item <%= lang === 'en' ? 'active' : '' %>" href="/set-language/en">
+                    <span class="flag-icon flag-icon-in"></span> EN
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item <%= lang === 'es' ? 'active' : '' %>" href="/set-language/es">
+                    <span class="flag-icon flag-icon-es"></span> ES
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item <%= lang === 'fr' ? 'active' : '' %>" href="/set-language/fr">
+                    <span class="flag-icon flag-icon-fr"></span> FR
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <% if(session && session.userId) { %>
               <!-- Profile dropdown -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
@@ -103,15 +100,16 @@
                     </a></li>
                 </ul>
               </li>
-            </ul>
-            <% } else { %>
-              <!-- If not logged in, show login link -->
-              <li class="nav-item">
-                <a class="nav-link <%= activePage === 'login' ? 'active' : '' %>" href="/login">
-                  <%= __('login') %>
-                </a>
-              </li>
-              <% } %>
+              <% } else { %>
+                <!-- If not logged in, show login link -->
+                <li class="nav-item">
+                  <a class="nav-link <%= activePage === 'login' ? 'active' : '' %>" href="/login">
+                    <%= __('login') %>
+                  </a>
+                </li>
+                <% } %>
+          </ul>
+
 
         </div> <!-- End of right side -->
       </div> <!-- End of container-fluid -->
