@@ -26,11 +26,15 @@ router.get('/', requireAuth, function (req, res) {
     try {
         if (req.session && req.session.user) {
             const profileData = req.session.user;
+            // if (profileData.image == null) {
+            //     profileData.image = '/images/default-avatar.jpg';  // Use the default image
+            // }
             res.locals.title = "Profile Page";
+            console.log('session data get', req.session.user)
             return res.render('profile/index', { profileData: profileData, activePage: 'profile' });
         }
     } catch (error) {
-        console.log(`Something want wrong to fetch profile ${error}`);
+        console.log(`Something went wrong to fetch profile ${error}`);
     }
 })
 
@@ -66,8 +70,8 @@ router.post('/update', upload.single('profile_image'), async function (req, res)
         if (!updatedUser) {
             return res.status(404).send('User not found.');
         }
-
         req.session.user = updatedUser;
+        // console.log('session data', req.session.user)
         req.toastr.success('Profile updated successfully.');
         return res.redirect('/home');
     } catch (error) {
