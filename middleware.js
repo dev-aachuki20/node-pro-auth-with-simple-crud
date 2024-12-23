@@ -1,17 +1,14 @@
-const requireAuth = (req, res, next) => {
-    if (req.session.userId) {
-        // req.session.cookie.expires = new Date(Date.now() + 3600000); // 1 hour from now
-        next();
-    } else {
-        req.toastr.error('You need to log in to access this page.');
+function requireAuth(req, res, next) {
+    if (!req.session.user) {
         return res.redirect('/login');
     }
+    next();
 }
 
 
 // Middleware to check if the user is already logged in.
 const redirectIfAuthenticated = (req, res, next) => {
-    if (req.session.userId) {
+    if (req.session.user) {
         return res.redirect('/home');
     }
     next();

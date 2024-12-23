@@ -30,7 +30,7 @@ router.get('/', requireAuth, function (req, res) {
             //     profileData.image = '/images/default-avatar.jpg';  // Use the default image
             // }
             res.locals.title = "Profile Page";
-            console.log('session data get', req.session.user)
+            // console.log('session data get', req.session.user)
             return res.render('profile/index', { profileData: profileData, activePage: 'profile' });
         }
     } catch (error) {
@@ -42,7 +42,7 @@ router.get('/', requireAuth, function (req, res) {
 // Update profile
 router.post('/update', upload.single('profile_image'), async function (req, res) {
     try {
-        const userId = req.session.userId;
+        const user_id = req.session.user._id;
         const data = req.body;
         const updatedData = {
             first_name: data.first_name,
@@ -51,9 +51,9 @@ router.post('/update', upload.single('profile_image'), async function (req, res)
             mobile_number: data.mobile_number
         };
 
-        // If a new profile image is uploaded
+        // If a new profile image is uploaded.
         if (req.file) {
-            const user = await User.findById(userId);
+            const user = await User.findById(user_id);
             if (user.image) {
                 fs.unlink(path.join(__dirname, '../public/images/uploads/', user.image), (err) => {
                     if (err) console.error('Error deleting old image:', err);
@@ -65,13 +65,12 @@ router.post('/update', upload.single('profile_image'), async function (req, res)
         }
 
         // Update the user in the database
-        const updatedUser = await User.findByIdAndUpdate(userId, updatedData, { new: true });
+        const updatedUser = await User.findByIdAndUpdate(user_id, updatedData, { new: true });
 
         if (!updatedUser) {
             return res.status(404).send('User not found.');
         }
         req.session.user = updatedUser;
-        // console.log('session data', req.session.user)
         req.toastr.success('Profile updated successfully.');
         return res.redirect('/home');
     } catch (error) {

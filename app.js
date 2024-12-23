@@ -14,9 +14,12 @@ const i18n = require('i18n');
 const app = express();
 const port = 5000;
 
+// Connect to MongoDB
+connectDB();
+
 // Set up i18n configuration
 i18n.configure({
-    locales: ['en', 'es', 'fr'/*, 'hi'*/],
+    locales: ['en', 'es', 'fr'],
     defaultLocale: 'en',
     directory: path.join(__dirname, 'locales'),
     objectNotation: true,
@@ -25,9 +28,6 @@ i18n.configure({
     autoReload: true,
     syncFiles: true
 });
-
-// Connect to MongoDB
-connectDB();
 
 // Use Middleware
 app.use(express.urlencoded({ extended: true }));
@@ -46,7 +46,7 @@ app.use(session({
     cookie: {
         secure: false,
         httpOnly: true,
-        maxAge: 3600000 // 1 hour in milliseconds.
+        maxAge: 3600000
     }
 }));
 
@@ -55,7 +55,6 @@ app.use((req, res, next) => {
     res.locals.session = req.session;
     res.locals.toasts = req.toastr.render();
     res.locals.title = "Node App";
-    req.session.cookie.expires = new Date(Date.now() + 3600000);
     res.locals.lang = req.cookies.lang;
     if (req.session.toastrMessage) {
         const { type, message } = req.session.toastrMessage;

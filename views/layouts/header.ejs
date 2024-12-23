@@ -70,34 +70,34 @@
                 </li>
               </ul>
             </li>
-            <% if(session && session.userId) { %>
+            <% if(session && session.user) { %>
               <!-- Profile dropdown -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                   aria-expanded="false">
                   <img
                     src="<%= session.user.image ? '/images/uploads/' + session.user.image : '/images/default-avatar.jpg' %>"
-                    height="25px" width="25px" alt="" style="border-radius: 50%;">
+                    height="30px" width="30px" alt="" style="border-radius: 50%;">
                 </a>
                 <ul class="dropdown-menu">
-
                   <li>
                     <a class="dropdown-item" href="#">
-                      <!-- <%= __('welcome') %> -->
                       <h6>
                         <%= session.user.first_name %>
                       </h6>
                     </a>
                   </li>
-                  <li><a class="dropdown-item <%= activePage === 'profile' ? 'active' : '' %>" href="/profile">
+                  <li>
+                    <a class="dropdown-item <%= activePage === 'profile' ? 'active' : '' %>" href="/profile">
                       <%= __('profile') %>
-                    </a></li>
-                  <li>
-                  <li>
+                    </a>
                   </li>
-                  <li><a class="dropdown-item" href="/logout">
+                  <li>
+                  <li>
+                    <a class="dropdown-item" href="/logout">
                       <%= __('logout') %>
-                    </a></li>
+                    </a>
+                  </li>
                 </ul>
               </li>
               <% } else { %>

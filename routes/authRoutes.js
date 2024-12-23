@@ -40,7 +40,6 @@ router.post('/login', async function (req, res) {
             req.toastr.error('Invalid credentials.');
             return res.redirect('/login');
         }
-        req.session.userId = existingUser._id.toString();
         req.session.user = existingUser;
 
         req.toastr.success('Login successfully.');
@@ -49,8 +48,6 @@ router.post('/login', async function (req, res) {
         console.error(`There was an error in sign in: ${error}`);
         req.toastr.error('An error occurred. Please try again.');
         return res.redirect('/login');
-
-        // res.status(500).render('error', { message: 'An unexpected error occurred. Please try again later.' });
     }
 })
 
@@ -82,7 +79,7 @@ router.get('/logout', (req, res) => {
 router.get('/signup', function (req, res) {
     try {
         res.locals.title = "Sign Up Page";
-        return res.render('auth/register', {activePage: 'signup'});
+        return res.render('auth/register', { activePage: 'signup' });
     } catch (error) {
         res.status(500).render('error', { message: 'There was an error to open register form.' });
     }
