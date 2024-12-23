@@ -76,7 +76,7 @@
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                   aria-expanded="false">
                   <img
-                    src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    src="<%= session.user.image ? '/images/uploads/' + session.user.image : '/images/default-avatar.jpg' %>"
                     height="25px" width="25px" alt="" style="border-radius: 50%;">
                 </a>
                 <ul class="dropdown-menu">

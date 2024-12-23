@@ -8,7 +8,7 @@
                     <%= __('update')%>
             </h3>
             <div class="row">
-                <form method="post" action="/profile/update">
+                <form method="post" action="/profile/update" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="mb-3">
@@ -48,6 +48,21 @@
                                 <input type="number" name="mobile_number" value="<%= profileData.mobile_number %>"
                                     class="form-control" id="exampleFormControlInput4"
                                     placeholder="<%= __('register_form.placeholder.enter_mobile_number')%>">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <!-- display image -->
+                            <div>
+                                <img src="<%= profileData.image ? '/images/uploads/' + profileData.image : '/images/default-avatar.jpg' %>"
+                                    alt="Profile Picture" width="80" height="80" style="border-radius:50%">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput5" class="form-label">
+                                    Upload Profile
+                                </label>
+                                <input type="file" name="profile_image" class="form-control"
+                                    id="exampleFormControlInput5" placeholder="Upload profile" accept="image/*">
                             </div>
                         </div>
                     </div>

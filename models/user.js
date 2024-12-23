@@ -33,26 +33,19 @@ const userSchema = new mongoose.Schema(
         password:
         {
             type: String,
-            required: [true, 'Password is required'],
-            // minlength: [6, 'Password must be at least 6 characters long'],
-            // maxlength: [8, 'Password can be max upto 8 characters long'],
+            required: [true, 'Password is required']
         },
         mobile_number:
         {
             type: String,
-            default: null,
-            // validate: {
-            //     validator: function (v) {
-            //         return /^\d{10}$/.test(v);
-            //     },
-            //     message: props => `${props.value} is not a valid mobile number!`
-            // }
+            default: null
         },
         status:
         {
             type: Boolean,
             default: true
         },
+        image: { type: String, default: null },
     }, {
     timestamps: true
 });
@@ -71,16 +64,6 @@ userSchema.pre('save', async function (next) {
 userSchema.methods.comparePassword = function (userPassword) {
     return bcrypt.compare(userPassword, this.password);
 };
-
-// Method to print full name
-// userSchema.methods.getFullName = function () {
-//     return `${this.first_name} ${this.last_name}`;
-// };
-
-// Define a virtual property for fullName
-// userSchema.virtual('fullName').get(function () {
-//     return `${this.first_name} ${this.last_name}`;
-// });
 
 // create a model.
 const User = mongoose.model('User', userSchema);

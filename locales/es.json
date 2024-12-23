@@ -1,70 +1,71 @@
 {
-    "node_pro": "Node Pro",
-    "login": "Acceso",
-    "signup": "Registrarse",
-    "form": "Formulario",
-    "home": "Inicio",
-    "contact_us": "Contáctenos",
-    "welcome": "Bienvenido",
-    "profile": "Perfil",
-    "logout": "Cerrar sesión",
-    "language": "Idioma",
-    "update": "Actualizar",
-    "save": "Guardar",
-    "submit": "Enviar",
-    "previous": "Anterior",
-    "next": "Siguiente",
-    "login_form": {
-        "fields": {
-            "email": "Correo electrónico",
-            "password": "Contraseña"
-        },
-        "placeholder": {
-            "enter_email": "Introduzca el correo electrónico",
-            "enter_password": "Introduzca la contraseña"
-        },
-        "not_signup": "Si no está registrado, por favor"
-    },
-    "register_form": {
-        "fields": {
-            "first_name": "Nombre",
-            "last_name": "Apellido",
-            "email": "Correo electrónico",
-            "password": "Contraseña",
-            "mobile_number": "Número de móvil"
-        },
-        "placeholder": {
-            "enter_first_name": "Introduzca el nombre",
-            "enter_last_name": "Introduzca el apellido",
-            "enter_email": "Introduzca el correo electrónico",
-            "enter_password": "Introduzca la contraseña",
-            "enter_mobile_number": "Introduzca el número de móvil"
-        },
-        "already_signup": "Si ya está registrado, por favor"
-    },
-    "contact_form": {
-        "fields": {
-            "full_name": "Nombre completo",
-            "email": "Correo electrónico",
-            "message": "Mensaje"
-        },
-        "placeholder": {
-            "enter_full_name": "Introduzca el nombre completo",
-            "enter_email": "Introduzca el correo electrónico",
-            "enter_message": "Introduzca el mensaje"
-        },
-        "create_new_contact": "Crear nuevo contacto",
-        "back_to_contacts": "Volver a los contactos",
-        "edit_contact": "Editar contacto",
-        "feel_free_to_ask": "¡Si tiene alguna pregunta, no dude en preguntar!",
-        "contact_detail": "Detalles del contacto",
-        "contact_list": "Lista de contactos",
-        "table": {
-            "name": "Nombre",
-            "email": "Correo electrónico",
-            "message": "Mensaje",
-            "action": "Acciones"
-        }
-    },
-    "need_to_login": "Necesita iniciar sesión para acceder a esta página."
+	"node_pro": "Node Pro",
+	"login": "Acceso",
+	"signup": "Registrarse",
+	"form": "Formulario",
+	"home": "Inicio",
+	"contact_us": "Contáctenos",
+	"welcome": "Bienvenido",
+	"profile": "Perfil",
+	"logout": "Cerrar sesión",
+	"language": "Idioma",
+	"update": "Actualizar",
+	"save": "Guardar",
+	"submit": "Enviar",
+	"previous": "Anterior",
+	"next": "Siguiente",
+	"login_form": {
+		"fields": {
+			"email": "Correo electrónico",
+			"password": "Contraseña"
+		},
+		"placeholder": {
+			"enter_email": "Introduzca el correo electrónico",
+			"enter_password": "Introduzca la contraseña"
+		},
+		"not_signup": "Si no está registrado, por favor"
+	},
+	"register_form": {
+		"fields": {
+			"first_name": "Nombre",
+			"last_name": "Apellido",
+			"email": "Correo electrónico",
+			"password": "Contraseña",
+			"mobile_number": "Número de móvil",
+			"enter_email": "register_form.fields.enter_email"
+		},
+		"placeholder": {
+			"enter_first_name": "Introduzca el nombre",
+			"enter_last_name": "Introduzca el apellido",
+			"enter_email": "Introduzca el correo electrónico",
+			"enter_password": "Introduzca la contraseña",
+			"enter_mobile_number": "Introduzca el número de móvil"
+		},
+		"already_signup": "Si ya está registrado, por favor"
+	},
+	"contact_form": {
+		"fields": {
+			"full_name": "Nombre completo",
+			"email": "Correo electrónico",
+			"message": "Mensaje"
+		},
+		"placeholder": {
+			"enter_full_name": "Introduzca el nombre completo",
+			"enter_email": "Introduzca el correo electrónico",
+			"enter_message": "Introduzca el mensaje"
+		},
+		"create_new_contact": "Crear nuevo contacto",
+		"back_to_contacts": "Volver a los contactos",
+		"edit_contact": "Editar contacto",
+		"feel_free_to_ask": "¡Si tiene alguna pregunta, no dude en preguntar!",
+		"contact_detail": "Detalles del contacto",
+		"contact_list": "Lista de contactos",
+		"table": {
+			"name": "Nombre",
+			"email": "Correo electrónico",
+			"message": "Mensaje",
+			"action": "Acciones"
+		}
+	},
+	"need_to_login": "Necesita iniciar sesión para acceder a esta página."
 }

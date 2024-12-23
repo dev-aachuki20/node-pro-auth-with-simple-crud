@@ -1,70 +1,71 @@
 {
-    "node_pro": "Node Pro",
-    "login": "Connexion",
-    "signup": "Inscription",
-    "form": "Formulaire",
-    "home": "Accueil",
-    "contact_us": "Contactez-nous",
-    "welcome": "Bienvenue",
-    "profile": "Profil",
-    "logout": "Se déconnecter",
-    "language": "Langue",
-    "update": "Mettre à jour",
-    "save": "Enregistrer",
-    "submit": "Soumettre",
-    "previous": "Précédent",
-    "next": "Suivant",
-    "login_form": {
-        "fields": {
-            "email": "Email",
-            "password": "Mot de passe"
-        },
-        "placeholder": {
-            "enter_email": "Entrez l'email",
-            "enter_password": "Entrez le mot de passe"
-        },
-        "not_signup": "Si vous n'êtes pas inscrit, veuillez"
-    },
-    "register_form": {
-        "fields": {
-            "first_name": "Prénom",
-            "last_name": "Nom de famille",
-            "email": "Email",
-            "password": "Mot de passe",
-            "mobile_number": "Numéro de téléphone"
-        },
-        "placeholder": {
-            "enter_first_name": "Entrez le prénom",
-            "enter_last_name": "Entrez le nom de famille",
-            "enter_email": "Entrez l'email",
-            "enter_password": "Entrez le mot de passe",
-            "enter_mobile_number": "Entrez le numéro de téléphone"
-        },
-        "already_signup": "Si vous êtes déjà inscrit, veuillez"
-    },
-    "contact_form": {
-        "fields": {
-            "full_name": "Nom complet",
-            "email": "Email",
-            "message": "Message"
-        },
-        "placeholder": {
-            "enter_full_name": "Entrez le nom complet",
-            "enter_email": "Entrez l'email",
-            "enter_message": "Entrez le message"
-        },
-        "create_new_contact": "Créer un nouveau contact",
-        "back_to_contacts": "Retour aux contacts",
-        "edit_contact": "Modifier le contact",
-        "feel_free_to_ask": "N'hésitez pas à poser des questions si vous en avez !",
-        "contact_detail": "Détails du contact",
-        "contact_list": "Liste des contacts",
-        "table": {
-            "name": "Nom",
-            "email": "Email",
-            "message": "Message",
-            "action": "Actions"
-        }
-    },
-    "need_to_login": "Vous devez vous connecter pour accéder à cette page."
+	"node_pro": "Node Pro",
+	"login": "Connexion",
+	"signup": "Inscription",
+	"form": "Formulaire",
+	"home": "Accueil",
+	"contact_us": "Contactez-nous",
+	"welcome": "Bienvenue",
+	"profile": "Profil",
+	"logout": "Se déconnecter",
+	"language": "Langue",
+	"update": "Mettre à jour",
+	"save": "Enregistrer",
+	"submit": "Soumettre",
+	"previous": "Précédent",
+	"next": "Suivant",
+	"login_form": {
+		"fields": {
+			"email": "Email",
+			"password": "Mot de passe"
+		},
+		"placeholder": {
+			"enter_email": "Entrez l'email",
+			"enter_password": "Entrez le mot de passe"
+		},
+		"not_signup": "Si vous n'êtes pas inscrit, veuillez"
+	},
+	"register_form": {
+		"fields": {
+			"first_name": "Prénom",
+			"last_name": "Nom de famille",
+			"email": "Email",
+			"password": "Mot de passe",
+			"mobile_number": "Numéro de téléphone",
+			"enter_email": "register_form.fields.enter_email"
+		},
+		"placeholder": {
+			"enter_first_name": "Entrez le prénom",
+			"enter_last_name": "Entrez le nom de famille",
+			"enter_email": "Entrez l'email",
+			"enter_password": "Entrez le mot de passe",
+			"enter_mobile_number": "Entrez le numéro de téléphone"
+		},
+		"already_signup": "Si vous êtes déjà inscrit, veuillez"
+	},
+	"contact_form": {
+		"fields": {
+			"full_name": "Nom complet",
+			"email": "Email",
+			"message": "Message"
+		},
+		"placeholder": {
+			"enter_full_name": "Entrez le nom complet",
+			"enter_email": "Entrez l'email",
+			"enter_message": "Entrez le message"
+		},
+		"create_new_contact": "Créer un nouveau contact",
+		"back_to_contacts": "Retour aux contacts",
+		"edit_contact": "Modifier le contact",
+		"feel_free_to_ask": "N'hésitez pas à poser des questions si vous en avez !",
+		"contact_detail": "Détails du contact",
+		"contact_list": "Liste des contacts",
+		"table": {
+			"name": "Nom",
+			"email": "Email",
+			"message": "Message",
+			"action": "Actions"
+		}
+	},
+	"need_to_login": "Vous devez vous connecter pour accéder à cette page."
 }
