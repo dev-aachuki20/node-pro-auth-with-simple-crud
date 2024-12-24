@@ -67,5 +67,6 @@
 			"action": "Acciones"
 		}
 	},
-	"need_to_login": "Necesita iniciar sesión para acceder a esta página."
+	"need_to_login": "Necesita iniciar sesión para acceder a esta página.",
+	"contact_detail": "contact_detail"
 }

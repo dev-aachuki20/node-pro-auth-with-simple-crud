@@ -67,5 +67,6 @@
 			"action": "Actions"
 		}
 	},
-	"need_to_login": "You need to log in to access this page."
+	"need_to_login": "You need to log in to access this page.",
+	"contact_detail": "contact_detail"
 }

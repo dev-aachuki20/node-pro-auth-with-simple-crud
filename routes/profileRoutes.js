@@ -27,10 +27,10 @@ router.get('/', requireAuth, function (req, res) {
         if (req.session && req.session.user) {
             const profileData = req.session.user;
             // if (profileData.image == null) {
-            //     profileData.image = '/images/default-avatar.jpg';  // Use the default image
+            //     profileData.image = 'http://127.0.0.1:5000/public/images/default-avatar.jpg';  // Use the default image
             // }
             res.locals.title = "Profile Page";
-            // console.log('session data get', req.session.user)
+            console.log('session data get', req.session.user)
             return res.render('profile/index', { profileData: profileData, activePage: 'profile' });
         }
     } catch (error) {

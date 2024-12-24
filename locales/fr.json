@@ -67,5 +67,6 @@
 			"action": "Actions"
 		}
 	},
-	"need_to_login": "Vous devez vous connecter pour accéder à cette page."
+	"need_to_login": "Vous devez vous connecter pour accéder à cette page.",
+	"contact_detail": "contact_detail"
 }
