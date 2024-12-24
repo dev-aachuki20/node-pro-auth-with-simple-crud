@@ -10,11 +10,11 @@ const path = require('path');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../public/images/uploads/'));  // specify the folder where images will be stored
+        cb(null, path.join(__dirname, '../public/images/uploads/'));
     },
     filename: (req, file, cb) => {
         const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
-        cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));  // generate a unique file name.
+        cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));
     }
 });
 
@@ -26,9 +26,6 @@ router.get('/', requireAuth, function (req, res) {
     try {
         if (req.session && req.session.user) {
             const profileData = req.session.user;
-            // if (profileData.image == null) {
-            //     profileData.image = 'http://127.0.0.1:5000/public/images/default-avatar.jpg';  // Use the default image
-            // }
             res.locals.title = "Profile Page";
             console.log('session data get', req.session.user)
             return res.render('profile/index', { profileData: profileData, activePage: 'profile' });

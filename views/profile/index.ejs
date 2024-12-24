@@ -51,9 +51,8 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <!-- display image -->
                             <div>
-                                <img src="<%= profileData.image != null ? '/images/uploads/' + profileData.image : '/images/default-avatar.jpg' %>"
+                                <img src="<%= profileData.image ? '/images/uploads/' + profileData.image : '/images/default-avtar.jpg' %>"
                                     alt="Profile Picture" width="80" height="80" style="border-radius:50%">
                             </div>
 
